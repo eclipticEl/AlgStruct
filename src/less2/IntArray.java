@@ -158,7 +158,4 @@ public class IntArray {
         arr[ind1] = arr[ind2];
         arr[ind2] = tmp;
     }
-
-
-
 }

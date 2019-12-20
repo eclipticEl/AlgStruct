@@ -2,7 +2,6 @@ package less2;
 
 public class Main {
 
-
     private static void testSorts(IntArray array,  int arrsize, int indSort){
 //инициализируем массив случайными числами
         array.RandomInit(arrsize);
@@ -29,7 +28,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        int arrsize = 1000000;
+        int arrsize = 100000;
         IntArray arr = new IntArray();
 
 //пузырек
@@ -40,7 +39,6 @@ public class Main {
         testSorts(arr,arrsize,2);
 
 /* //тестирование методов
-
         arr.addElement(10);
         arr.addElement(7);
         arr.addElement(15);
