@@ -4,10 +4,10 @@ public class Main {
 
 
     private static void testSorts(IntArray array,  int arrsize, int indSort){
-
+//инициализируем массив случайными числами
         array.RandomInit(arrsize);
-//        array.display();
 
+// засекаем время выполинения сортировки
         long beginTime = System.nanoTime();
         switch (indSort){
             case 0: array.sortBubble(); break;
@@ -16,8 +16,7 @@ public class Main {
         }
         float deltaTime = (System.nanoTime() - beginTime) * 0.000000001f;
 
-//        array.display();
-
+// формируем строку вывода времени выполнения и выводим на экран
         StringBuilder msg = new StringBuilder();
         switch (indSort){
             case 0: msg.append("Сортировка пузырьком. "); break;
@@ -33,9 +32,25 @@ public class Main {
         int arrsize = 1000000;
         IntArray arr = new IntArray();
 
+//пузырек
         testSorts(arr,arrsize,0);
+//выбором
         testSorts(arr,arrsize,1);
+//вставками
         testSorts(arr,arrsize,2);
 
+/* //тестирование методов
+
+        arr.addElement(10);
+        arr.addElement(7);
+        arr.addElement(15);
+        arr.addElement(7);
+        arr.display();
+        arr.deleteElement(7);
+        arr.display();
+        arr.deleteElementByInd(0);
+        arr.display();
+
+        System.out.println(arr.getElement(20));*/
     }
 }
