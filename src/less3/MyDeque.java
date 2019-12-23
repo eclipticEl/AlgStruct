@@ -61,8 +61,15 @@ public class MyDeque {
         return tmp;
     }
 
-    public int peek(){
+    public int peekLeft(){
         return  deque[front];
     }
 
+    public int peekRight(){
+        return  deque[rear];
+    }
+
+    public int Count(){
+        return items;
+    }
 }
